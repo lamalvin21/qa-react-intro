@@ -1,10 +1,14 @@
 import React from 'react'
 
-const ItemCard = ({item}) => {
+const ItemCard = ({item, onDelete, index}) => {
+    function handleClick() {
+        onDelete(index)
+    }
+
   return (
     <>
         <h1>{item}</h1>
-        <button>Delete This Item!</button>
+        <button onClick={handleClick}>Delete This Item!</button>
     </>
     )
 }
