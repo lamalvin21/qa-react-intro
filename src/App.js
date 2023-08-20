@@ -1,13 +1,14 @@
 import './App.css';
+import React from 'react';
+import {useEffect, useState} from 'react';
+import ListOfItems from './ListOfItems';
 
 function App() {
+  const [array, setArray] = useState([2,4,6,7,3,1,9,8,5]);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <p>
-          Hello from React
-        </p>
-      </header>
+      <ListOfItems array={array} />
     </div>
   );
 }
